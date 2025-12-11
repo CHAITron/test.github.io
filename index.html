@@ -559,7 +559,11 @@
                       {TEAM_DATA.affiliated.map((member, i) => (
                           <div key={i} className="text-center p-3 bg-white rounded-lg border border-gray-200 hover:border-orange-200 transition-colors group shadow-sm">
                                   <div className="w-16 h-16 mx-auto mb-2 rounded-full overflow-hidden border border-gray-100 group-hover:border-orange-300">
-                                  <MemberAvatar name={member.name} image={member.image} className="w-full h-full" />
+                            <MemberAvatar 
+                                name={member.name} 
+                                image={getImgPath(member.name)}
+                                className="w-full h-full"
+                            />
                                   </div>
                                   <h4 className="font-bold text-sm leading-tight mb-1">{member.name}</h4>
                           </div>
