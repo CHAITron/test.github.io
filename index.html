@@ -225,7 +225,7 @@
           "Subhadeep Koley", "Hmrishav Bandyopadhyay", "Arkaprabha Basu", 
           "Dawn Raison", "Dongyu Wang", "Dar-Yen Chen", "Alex McDermott", 
           "Chaitat Utintu"
-        ].map(name => ({ name })),
+  ].map(name => ({ name, image: getImgPath(name) })),
         alumni: [
           { name: "Yulia Gryaditskaya", current: "Senior Research Scientist at Adobe" },
           { name: "Anran Qi", current: "Postdoc at University of Tokyo" },
@@ -248,7 +248,7 @@
           { name: "Ruolin Yang" }, 
           { name: "Alexander Ashcroft" }, 
           { name: "Ruoyi Du" }
-        ]
+  ].map(p => ({ ...p, image: p.image || getImgPath(p.name) }))
       };
 
       // --- Components ---
